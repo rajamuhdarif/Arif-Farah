@@ -7,8 +7,8 @@
 
     <meta property="og:title" content="Majlis Bertandang Arif & Farah">
     <meta property="og:description" content="Sabtu, 4 April 2026 | Teratak Jamaisha, Kuala Kangsar">
-    <meta property="og:image" content="https://mufisafirdauz.github.io/Wedding-Raja-dan-Farah/230531120726-wedding-trends-restricted.jpg">
-    <meta property="og:url" content="https://mufisafirdauz.github.io/Wedding-Raja-dan-Farah/">
+    <meta property="og:image" content="https://rajamuhdarif.github.io/Arif-Farah/230531120726-wedding-trends-restricted.jpg">
+    <meta property="og:url" content="https://rajamuhdarif.github.io/Arif-Farah/">
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Cormorant+Garamond:wght@300;500&display=swap" rel="stylesheet">
 
@@ -20,22 +20,61 @@
             font-family: 'Cormorant Garamond', serif; 
             display: flex; justify-content: center; align-items: center; min-height: 100vh; 
         }
+
+        /* Container Utama dengan Bingkai Penjuru */
         .container { 
-            max-width: 600px; width: 90%; padding: 50px 30px; 
-            text-align: center; border: 2px solid rgba(212,175,55,0.3); 
+            max-width: 600px; width: 90%; padding: 60px 30px; 
+            text-align: center; border: 1px solid rgba(212,175,55,0.3); 
             background-color: #3B2321; box-shadow: 0 15px 40px rgba(0,0,0,0.6); 
             position: relative;
+            overflow: hidden; /* Supaya corak tidak terkeluar */
         }
+
+        /* Rekaan Corak di Penjuru (Corners) */
+        .container::before, .container::after,
+        .corner-bottom::before, .corner-bottom::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #D4AF37;
+            pointer-events: none;
+        }
+
+        /* Penjuru Atas Kiri */
+        .container::before {
+            top: 15px; left: 15px;
+            border-right: none; border-bottom: none;
+        }
+
+        /* Penjuru Atas Kanan */
+        .container::after {
+            top: 15px; right: 15px;
+            border-left: none; border-bottom: none;
+        }
+
+        /* Penjuru Bawah */
+        .corner-bottom::before {
+            bottom: 15px; left: 15px;
+            border-right: none; border-top: none;
+        }
+
+        .corner-bottom::after {
+            bottom: 15px; right: 15px;
+            border-left: none; border-top: none;
+        }
+
         .monogram { 
-            font-family: 'Great Vibes', cursive; font-size: 50px; 
+            font-family: 'Great Vibes', cursive; font-size: 55px; 
             color: #D4AF37; margin-bottom: 10px; 
         }
+
         h1 { 
-            font-family: 'Cinzel', serif; font-size: 22px; 
-            font-weight: 400; letter-spacing: 4px; color: #D4AF37; margin: 0; 
+            font-family: 'Cinzel', serif; font-size: 20px; 
+            font-weight: 400; letter-spacing: 5px; color: #D4AF37; margin: 0; 
         }
-        .sub-header { font-size: 14px; letter-spacing: 2px; margin-bottom: 30px; opacity: 0.8; }
-        
+
+        .sub-header { font-size: 13px; letter-spacing: 3px; margin-bottom: 30px; opacity: 0.8; }
         .invitation-text { font-size: 18px; line-height: 1.6; margin-bottom: 30px; font-style: italic; }
         
         .event-details { 
@@ -50,21 +89,20 @@
             width: 100%; padding: 12px; margin: 10px 0; 
             background: rgba(255,255,255,0.03); border: 1px solid rgba(212,175,55,0.4); 
             color: #F5E6D3; font-family: 'Cormorant Garamond', serif; 
-            font-size: 16px; box-sizing: border-box; 
+            font-size: 16px; box-sizing: border-box; outline: none;
         }
-        option { background: #3B2321; color: #F5E6D3; }
-        
+
         button { 
             margin-top: 20px; padding: 15px 30px; background: #D4AF37; 
             border: none; color: #3B2321; font-family: 'Cinzel', serif; 
             font-weight: 600; cursor: pointer; width: 100%; 
             transition: 0.4s; letter-spacing: 2px; 
         }
-        button:hover { background: #F5E6D3; transform: scale(1.02); }
+        button:hover { background: #F5E6D3; }
         button:disabled { background: #666; color: #999; cursor: not-allowed; }
 
         .footer-note { margin-top: 30px; font-size: 15px; opacity: 0.9; }
-        #thankyou { display:none; margin-top:20px; color:#D4AF37; font-size: 24px; font-family: 'Great Vibes', cursive; }
+        #thankyou { display:none; margin-top:20px; color:#D4AF37; font-size: 26px; font-family: 'Great Vibes', cursive; }
         .fade-in { animation: fadeIn 2s ease-in-out; }
         @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
     </style>
@@ -72,6 +110,8 @@
 <body>
 
 <div class="container fade-in">
+    <div class="corner-bottom"></div>
+
     <h1>MAJLIS BERTANDANG</h1>
     <div class="monogram">Arif & Farah</div>
     <div class="sub-header">DENGAN PENUH KESYUKURAN DAN KASIH SAYANG</div>
@@ -89,26 +129,52 @@
     <script type="text/javascript">var submitted=false;</script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {showSuccess();}"></iframe>
 
-    <form id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfI7KLtU2t9D8XfJop8ygoJ6gTwES3UJG7Q8gY09W_gZ-0JSg/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit();">
+    <form id="rsvpForm" action="https://docs.google.com/forms/d/e/19KrSDK6zSmMm52Jhdf4r66HDJE89wTzXGmTWMu188Ac/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit();">
         
-        <input type="text" name="entry.2008878480" placeholder="Nama Penuh" required>
+        <input type="text" name="entry.1249614079" placeholder="Nama Penuh" required>
 
-        <select name="entry.301750634" required>
-            <option value="">Kehadiran</option>
+        <select name="entry.1752464517" required>
+            <option value="">Kehadiran Tetamu</option>
             <option value="Hadir">Hadir</option>
             <option value="Tidak Hadir">Tidak Hadir</option>
         </select>
 
-        <select name="entry.1134977689" required>
+        <select name="entry.1794605451" required>
             <option value="">Bilangan Tetamu</option>
             <option value="1">1 orang</option>
             <option value="2">2 orang</option>
             <option value="3">3 orang</option>
             <option value="4">4 orang</option>
-            <option value="0">0 (Jika Tidak Hadir)</option>
         </select>
 
-        <textarea name="entry.1308646409" rows="3" placeholder="Ucapan & Doa (Optional)"></textarea>
-       
+        <textarea name="entry.2035515716" rows="3" placeholder="Ucapan dan Doa untuk Mempelai (Optional)"></textarea>
+        
         <button type="submit" id="submitBtn">HANTAR PENGESAHAN</button>
     </form>
+
+    <div id="thankyou">
+        <p>Terima Kasih!</p>
+        <p style="font-size: 16px; font-family: 'Cormorant Garamond';">Kehadiran anda sangat kami hargai.</p>
+    </div>
+
+    <div class="footer-note">
+        Semoga kehadiran dan doa restu anda menyerikan lagi majlis kami.
+    </div>
+</div>
+
+<script>
+    function handleFormSubmit() {
+        const btn = document.getElementById('submitBtn');
+        btn.disabled = true;
+        btn.innerHTML = "MENGHANTAR...";
+        submitted = true;
+    }
+
+    function showSuccess() {
+        document.getElementById('rsvpForm').style.display = 'none';
+        document.getElementById('thankyou').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

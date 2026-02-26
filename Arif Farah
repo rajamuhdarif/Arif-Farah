@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majlis Bertandang | Arif & Farah</title>
+
+    <meta property="og:title" content="Majlis Bertandang Arif & Farah">
+    <meta property="og:description" content="Sabtu, 4 April 2026 | Teratak Jamaisha, Kuala Kangsar">
+    <meta property="og:image" content="https://mufisafirdauz.github.io/Wedding-Raja-dan-Farah/230531120726-wedding-trends-restricted.jpg">
+    <meta property="og:url" content="https://mufisafirdauz.github.io/Wedding-Raja-dan-Farah/">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Cormorant+Garamond:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            margin: 0; padding: 0; background-color: #4A2C2A; 
+            background-image: radial-gradient(rgba(0,0,0,0.3) 1px, transparent 1px);
+            background-size: 4px 4px; color: #F5E6D3; 
+            font-family: 'Cormorant Garamond', serif; 
+            display: flex; justify-content: center; align-items: center; min-height: 100vh; 
+        }
+        .container { 
+            max-width: 600px; width: 90%; padding: 50px 30px; 
+            text-align: center; border: 2px solid rgba(212,175,55,0.3); 
+            background-color: #3B2321; box-shadow: 0 15px 40px rgba(0,0,0,0.6); 
+            position: relative;
+        }
+        .monogram { 
+            font-family: 'Great Vibes', cursive; font-size: 50px; 
+            color: #D4AF37; margin-bottom: 10px; 
+        }
+        h1 { 
+            font-family: 'Cinzel', serif; font-size: 22px; 
+            font-weight: 400; letter-spacing: 4px; color: #D4AF37; margin: 0; 
+        }
+        .sub-header { font-size: 14px; letter-spacing: 2px; margin-bottom: 30px; opacity: 0.8; }
+        
+        .invitation-text { font-size: 18px; line-height: 1.6; margin-bottom: 30px; font-style: italic; }
+        
+        .event-details { 
+            border-top: 1px solid rgba(212,175,55,0.2);
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+            padding: 20px 0; margin-bottom: 30px;
+        }
+        .detail-item { margin: 5px 0; font-size: 19px; }
+        .location { font-weight: 500; color: #D4AF37; }
+
+        input, select, textarea { 
+            width: 100%; padding: 12px; margin: 10px 0; 
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(212,175,55,0.4); 
+            color: #F5E6D3; font-family: 'Cormorant Garamond', serif; 
+            font-size: 16px; box-sizing: border-box; 
+        }
+        option { background: #3B2321; color: #F5E6D3; }
+        
+        button { 
+            margin-top: 20px; padding: 15px 30px; background: #D4AF37; 
+            border: none; color: #3B2321; font-family: 'Cinzel', serif; 
+            font-weight: 600; cursor: pointer; width: 100%; 
+            transition: 0.4s; letter-spacing: 2px; 
+        }
+        button:hover { background: #F5E6D3; transform: scale(1.02); }
+        button:disabled { background: #666; color: #999; cursor: not-allowed; }
+
+        .footer-note { margin-top: 30px; font-size: 15px; opacity: 0.9; }
+        #thankyou { display:none; margin-top:20px; color:#D4AF37; font-size: 24px; font-family: 'Great Vibes', cursive; }
+        .fade-in { animation: fadeIn 2s ease-in-out; }
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    </style>
+</head>
+<body>
+
+<div class="container fade-in">
+    <h1>MAJLIS BERTANDANG</h1>
+    <div class="monogram">Arif & Farah</div>
+    <div class="sub-header">DENGAN PENUH KESYUKURAN DAN KASIH SAYANG</div>
+
+    <div class="invitation-text">
+        Dengan penuh kesyukuran ke hadrat Ilahi, kami menjemput Dato' / Datin / Tuan / Puan / Encik / Cik ke majlis bertandang kami.
+    </div>
+
+    <div class="event-details">
+        <div class="detail-item">Sabtu, 4 April 2026</div>
+        <div class="detail-item">11:30 am - 4:00 pm</div>
+        <div class="detail-item location">Teratak Jamaisha, Bukit Chandan, Kuala Kangsar</div>
+    </div>
+
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {showSuccess();}"></iframe>
+
+    <form id="rsvpForm" action="

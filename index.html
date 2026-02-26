@@ -21,65 +21,31 @@
             display: flex; justify-content: center; align-items: center; min-height: 100vh; 
         }
 
-        /* Container Utama dengan Bingkai Penjuru */
         .container { 
             max-width: 600px; width: 90%; padding: 60px 30px; 
             text-align: center; border: 1px solid rgba(212,175,55,0.3); 
             background-color: #3B2321; box-shadow: 0 15px 40px rgba(0,0,0,0.6); 
-            position: relative;
-            overflow: hidden; /* Supaya corak tidak terkeluar */
+            position: relative; overflow: hidden;
         }
 
-        /* Rekaan Corak di Penjuru (Corners) */
+        /* Corak Frame Penjuru (Sama seperti PDF) */
         .container::before, .container::after,
         .corner-bottom::before, .corner-bottom::after {
-            content: "";
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            border: 2px solid #D4AF37;
-            pointer-events: none;
+            content: ""; position: absolute; width: 60px; height: 60px;
+            border: 2px solid #D4AF37; pointer-events: none;
         }
+        .container::before { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+        .container::after { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+        .corner-bottom::before { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+        .corner-bottom::after { bottom: 20px; right: 20px; border-left: none; border-top: none; }
 
-        /* Penjuru Atas Kiri */
-        .container::before {
-            top: 15px; left: 15px;
-            border-right: none; border-bottom: none;
-        }
-
-        /* Penjuru Atas Kanan */
-        .container::after {
-            top: 15px; right: 15px;
-            border-left: none; border-bottom: none;
-        }
-
-        /* Penjuru Bawah */
-        .corner-bottom::before {
-            bottom: 15px; left: 15px;
-            border-right: none; border-top: none;
-        }
-
-        .corner-bottom::after {
-            bottom: 15px; right: 15px;
-            border-left: none; border-top: none;
-        }
-
-        .monogram { 
-            font-family: 'Great Vibes', cursive; font-size: 55px; 
-            color: #D4AF37; margin-bottom: 10px; 
-        }
-
-        h1 { 
-            font-family: 'Cinzel', serif; font-size: 20px; 
-            font-weight: 400; letter-spacing: 5px; color: #D4AF37; margin: 0; 
-        }
-
+        .monogram { font-family: 'Great Vibes', cursive; font-size: 55px; color: #D4AF37; margin-bottom: 10px; }
+        h1 { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 400; letter-spacing: 5px; color: #D4AF37; margin: 0; }
         .sub-header { font-size: 13px; letter-spacing: 3px; margin-bottom: 30px; opacity: 0.8; }
         .invitation-text { font-size: 18px; line-height: 1.6; margin-bottom: 30px; font-style: italic; }
         
         .event-details { 
-            border-top: 1px solid rgba(212,175,55,0.2);
-            border-bottom: 1px solid rgba(212,175,55,0.2);
+            border-top: 1px solid rgba(212,175,55,0.2); border-bottom: 1px solid rgba(212,175,55,0.2);
             padding: 20px 0; margin-bottom: 30px;
         }
         .detail-item { margin: 5px 0; font-size: 19px; }
@@ -88,18 +54,16 @@
         input, select, textarea { 
             width: 100%; padding: 12px; margin: 10px 0; 
             background: rgba(255,255,255,0.03); border: 1px solid rgba(212,175,55,0.4); 
-            color: #F5E6D3; font-family: 'Cormorant Garamond', serif; 
-            font-size: 16px; box-sizing: border-box; outline: none;
+            color: #F5E6D3; font-family: 'Cormorant Garamond', serif; font-size: 16px; box-sizing: border-box;
         }
-
+        
         button { 
             margin-top: 20px; padding: 15px 30px; background: #D4AF37; 
             border: none; color: #3B2321; font-family: 'Cinzel', serif; 
-            font-weight: 600; cursor: pointer; width: 100%; 
-            transition: 0.4s; letter-spacing: 2px; 
+            font-weight: 600; cursor: pointer; width: 100%; letter-spacing: 2px; 
         }
         button:hover { background: #F5E6D3; }
-        button:disabled { background: #666; color: #999; cursor: not-allowed; }
+        button:disabled { background: #666; cursor: not-allowed; }
 
         .footer-note { margin-top: 30px; font-size: 15px; opacity: 0.9; }
         #thankyou { display:none; margin-top:20px; color:#D4AF37; font-size: 26px; font-family: 'Great Vibes', cursive; }
@@ -111,7 +75,6 @@
 
 <div class="container fade-in">
     <div class="corner-bottom"></div>
-
     <h1>MAJLIS BERTANDANG</h1>
     <div class="monogram">Arif & Farah</div>
     <div class="sub-header">DENGAN PENUH KESYUKURAN DAN KASIH SAYANG</div>
@@ -129,12 +92,12 @@
     <script type="text/javascript">var submitted=false;</script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {showSuccess();}"></iframe>
 
-    <form id="rsvpForm" action="https://docs.google.com/forms/d/e/19KrSDK6zSmMm52Jhdf4r66HDJE89wTzXGmTWMu188Ac/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit();">
+    <form id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLScsY0_zU10_Nf9W-R_qS9_mI-m9x6j7T49f6-vW9-r-gZ5g9A/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit();">
         
         <input type="text" name="entry.1249614079" placeholder="Nama Penuh" required>
 
         <select name="entry.1752464517" required>
-            <option value="">Kehadiran Tetamu</option>
+            <option value="">Kehadiran</option>
             <option value="Hadir">Hadir</option>
             <option value="Tidak Hadir">Tidak Hadir</option>
         </select>
@@ -145,9 +108,10 @@
             <option value="2">2 orang</option>
             <option value="3">3 orang</option>
             <option value="4">4 orang</option>
+            <option value="0">0 (Jika Tidak Hadir)</option>
         </select>
 
-        <textarea name="entry.2035515716" rows="3" placeholder="Ucapan dan Doa untuk Mempelai (Optional)"></textarea>
+        <textarea name="entry.2035515716" rows="3" placeholder="Ucapan & Doa (Optional)"></textarea>
         
         <button type="submit" id="submitBtn">HANTAR PENGESAHAN</button>
     </form>
@@ -155,10 +119,6 @@
     <div id="thankyou">
         <p>Terima Kasih!</p>
         <p style="font-size: 16px; font-family: 'Cormorant Garamond';">Kehadiran anda sangat kami hargai.</p>
-    </div>
-
-    <div class="footer-note">
-        Semoga kehadiran dan doa restu anda menyerikan lagi majlis kami.
     </div>
 </div>
 

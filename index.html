@@ -89,4 +89,26 @@
     <script type="text/javascript">var submitted=false;</script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {showSuccess();}"></iframe>
 
-    <form id="rsvpForm" action="
+    <form id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfI7KLtU2t9D8XfJop8ygoJ6gTwES3UJG7Q8gY09W_gZ-0JSg/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit();">
+        
+        <input type="text" name="entry.2008878480" placeholder="Nama Penuh" required>
+
+        <select name="entry.301750634" required>
+            <option value="">Kehadiran</option>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+        </select>
+
+        <select name="entry.1134977689" required>
+            <option value="">Bilangan Tetamu</option>
+            <option value="1">1 orang</option>
+            <option value="2">2 orang</option>
+            <option value="3">3 orang</option>
+            <option value="4">4 orang</option>
+            <option value="0">0 (Jika Tidak Hadir)</option>
+        </select>
+
+        <textarea name="entry.1308646409" rows="3" placeholder="Ucapan & Doa (Optional)"></textarea>
+       
+        <button type="submit" id="submitBtn">HANTAR PENGESAHAN</button>
+    </form>

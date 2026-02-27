@@ -1,256 +1,30 @@
-<!DOCTYPE html>
-<html lang="ms">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Majlis Bertandang | RA • FA</title>
-
-<meta property="og:title" content="Majlis Bertandang RA • FA">
-<meta property="og:description" content="Sabtu, 4 April 2026 | Teratak Jamaisha, Kuala Kangsar">
-<meta property="og:image" content="https://rajamuhdarif.github.io/Arif-Farah/230531120726-wedding-trends-restricted.jpg">
-<meta property="og:url" content="https://rajamuhdarif.github.io/Arif-Farah/">
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #4A2C2A;
-    background-image: radial-gradient(rgba(0,0,0,0.3) 1px, transparent 1px);
-    background-size: 4px 4px;
-    color: #F5E6D3;
-    font-family: 'Cormorant Garamond', serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 600px;
-    width: 90%;
-    padding: 60px 30px;
-    text-align: center;
-    border: 1px solid rgba(212,175,55,0.3);
-    background-color: #3B2321;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    position: relative;
-    overflow: hidden;
-}
-
-.container::before, .container::after,
-.corner-bottom::before, .corner-bottom::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #D4AF37;
-    pointer-events: none;
-}
-.container::before { top: 20px; left: 20px; border-right: none; border-bottom: none; }
-.container::after { top: 20px; right: 20px; border-left: none; border-bottom: none; }
-.corner-bottom::before { bottom: 20px; left: 20px; border-right: none; border-top: none; }
-.corner-bottom::after { bottom: 20px; right: 20px; border-left: none; border-top: none; }
-
-.monogram {
-    font-family: 'Cinzel', serif;
-    font-size: 45px;
-    color: #D4AF37;
-    margin-bottom: 5px;
-    letter-spacing: 8px;
-}
-
-h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    color: #D4AF37;
-    margin: 0;
-}
-
-.small-header {
-    font-size: 13px;
-    letter-spacing: 2.5px;
-    opacity: 0.9;
-    color: #F5E6D3;
-    text-transform: uppercase;
-    margin: 10px 0 30px 0;
-}
-
-.invitation-text {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-
-.event-details {
-    border-top: 1px solid rgba(212,175,55,0.2);
-    border-bottom: 1px solid rgba(212,175,55,0.2);
-    padding: 20px 0;
-    margin-bottom: 30px;
-}
-
-.detail-item { margin: 5px 0; font-size: 19px; }
-.location { font-weight: 500; color: #D4AF37; }
-
-input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(212,175,55,0.4);
-    color: #F5E6D3;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    box-sizing: border-box;
-    outline: none;
-}
-
-input:focus, select:focus, textarea:focus {
-    border-color: #D4AF37;
-    box-shadow: 0 0 8px rgba(212,175,55,0.5);
-}
-
-option { background: #3B2321; color: #F5E6D3; }
-
-button {
-    margin-top: 20px;
-    padding: 15px 30px;
-    background: #D4AF37;
-    border: none;
-    color: #3B2321;
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-button:hover { background: #F5E6D3; }
-button:disabled { background: #666; cursor: not-allowed; }
-
-#thankyou {
-    display:none;
-    margin-top:20px;
-    color:#D4AF37;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.fade-in { animation: fadeIn 2s ease-in-out; }
-@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-</style>
-</head>
-
-<body>
-
-<div class="container fade-in">
-<div class="corner-bottom"></div>
-
-<h1>MAJLIS BERTANDANG</h1>
-<div class="monogram">RA • FA</div>
-<div class="small-header" style="margin-top: -15px; letter-spacing: 4px;">
-RAJA ARIF & FARAH ALEEYA
-</div>
-
-<div class="invitation-text">
-Dengan penuh kesyukuran ke hadrat Ilahi, kami menjemput
-Dato' / Datin / Tuan / Puan / Encik / Cik ke majlis bertandang kami.
-</div>
-
-<div class="event-details">
-<div class="detail-item">Sabtu, 4 April 2026</div>
-<div class="detail-item">11:30 am - 4:00 pm</div>
-<div class="detail-item location">
-Teratak Jamaisha, Bukit Chandan, Kuala Kangsar
-</div>
-</div>
-
-<!-- hidden iframe -->
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
 <form id="rsvpForm"
-action="https://docs.google.com/forms/d/e/1FAIpQLSe1voglPb1ulffM6T2FWIs5gTuD-uzjxCEufiVAjTtppLmiNQ/formResponse"
+action="PASTE_YOUR_FORMRESPONSE_HERE"
 method="POST"
 target="hidden_iframe"
 onsubmit="handleFormSubmit();">
 
-<input type="text" name="entry.2005620554" placeholder="Nama Penuh" required>
+<input type="text" name="entry.XXXXX" placeholder="Nama Penuh" required>
 
-<select name="entry.1045781291" required>
-<option value="">Kehadiran Tetamu</option>
-<option value="Hadir">Hadir</option>
-<option value="Tidak Hadir">Tidak Hadir</option>
+<select name="entry.XXXXX" required>
+    <option value="">Kehadiran Tetamu</option>
+    <option value="Hadir">Hadir</option>
+    <option value="Tidak Hadir">Tidak Hadir</option>
 </select>
 
-<select name="entry.1166974658" id="guestCount" required>
-<option value="">Bilangan Tetamu</option>
-<option value="1">1 orang</option>
-<option value="2">2 orang</option>
-<option value="3">3 orang</option>
-<option value="4">4 orang</option>
+<select name="entry.XXXXX" required>
+    <option value="">Bilangan Tetamu</option>
+    <option value="1">1 orang</option>
+    <option value="2">2 orang</option>
+    <option value="3">3 orang</option>
+    <option value="4">4 orang</option>
 </select>
 
-<textarea name="entry.839337160" rows="3"
+<textarea name="entry.XXXXX" rows="3"
 placeholder="Ucapan dan Doa untuk Mempelai (Optional)"></textarea>
 
-<button type="submit" id="submitBtn">HANTAR PENGESAHAN</button>
+<button type="submit" id="submitBtn">
+HANTAR PENGESAHAN
+</button>
+
 </form>
-
-<div id="thankyou">
-<p style="font-size:40px;font-family:'Great Vibes';">Terima Kasih</p>
-<p style="font-size:18px;font-family:'Cormorant Garamond';">
-Kehadiran anda sangat kami hargai.
-</p>
-
-<a href="https://wa.me/60195050029"
-style="display:inline-block;margin-top:20px;padding:12px 25px;
-background:#D4AF37;color:#3B2321;text-decoration:none;
-font-family:'Cinzel';letter-spacing:2px;">
-WHATSAPP KAMI
-</a>
-</div>
-
-</div>
-
-<script>
-let submitted = false;
-
-// stable iframe listener
-document.getElementById("hidden_iframe").addEventListener("load", function () {
-    if (submitted) showSuccess();
-});
-
-function handleFormSubmit() {
-    const btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.innerHTML = "MENGHANTAR...";
-    submitted = true;
-}
-
-function showSuccess() {
-    document.getElementById('rsvpForm').style.display = 'none';
-    const thankyou = document.getElementById('thankyou');
-    thankyou.style.display = 'block';
-    thankyou.scrollIntoView({behavior:'smooth'});
-}
-
-// smart hide bilangan
-const attendanceSelect = document.querySelector('select[name="entry.1045781291"]');
-const guestCountSelect = document.getElementById('guestCount');
-
-attendanceSelect.addEventListener("change", function() {
-    if (this.value === "Tidak Hadir") {
-        guestCountSelect.style.display = "none";
-        guestCountSelect.removeAttribute("required");
-    } else {
-        guestCountSelect.style.display = "block";
-        guestCountSelect.setAttribute("required", "required");
-    }
-});
-</script>
-
-</body>
-</html>
